@@ -4,10 +4,10 @@ html{
 }
 
 #container{
-    height: 400px;
-    width: 550px;
+    height: 600px;
+    width: 750px;
     background-color: rgb(139, 220, 247);
-    margin: 100px auto;
+    margin: 10px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 6px 8px 0px 0px rgb(56, 157, 190);
@@ -19,7 +19,7 @@ html{
     color: black;
     padding: 11px;
     position: absolute;
-    left:500px;
+    left:700px;
     box-shadow: 3px 4px 0px 0px rgb(119, 56, 190) ;
     border-radius: 5px;
 }
@@ -42,17 +42,19 @@ html{
     display: none;
 }
 
-#question{
-    width: 450px;
-    height: 150px;
+#fruitContainer{
+    width: 650px;
+    height: 400px;
     margin: 50px auto 10px auto;
-    background-color: rgb(175, 130, 233);
+    background-color: white;
     box-shadow: 6px 8px 0px 0px rgb(56, 157, 190);
     border-radius: 5px;
     font-size: 100px;
     text-align: center;
     font-family: cursive, sans-serif;
     color:black;
+    position: relative;
+    overflow: hidden;
 
 }
 
@@ -122,12 +124,11 @@ html{
     transition: all 0.2s;
 }
 
-#time{
-    width:165px;
+#trailsLeft{
+    width:100px;
     padding: 10px;
     position: absolute;
-    top:395px;
-    left: 400px;
+    
     background-color: rgba(181, 235, 36, 0.8);
     border-radius: 3px;
     box-shadow: 3px 4px green;
@@ -144,8 +145,21 @@ html{
     text-align: center;
     text-transform: uppercase;
     position: absolute;
-    top: 100px;
-    left: 45px;
+    top: 170px;
+    left: 141px;
     z-index: 2;
     display: none;
+}
+
+.life{
+    width: 20px;
+    height: 20px;
+    margin: 0 6px;
+}
+
+.fruit{
+    width: 100px;
+    height: 110px;
+    display: none;
+    position: absolute;
 }

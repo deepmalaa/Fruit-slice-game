@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Maths Game</title>
+        <title>Fruit Slice</title>
         <meta charset = "utf-8">
         <meta name = "viewport" content="width=device-width , initial-scale=1, user-scalable=yes">
 
@@ -15,6 +15,10 @@
 
             </div>
 
+            <div id="trailsLeft">
+                 <span id="timeRemaining"></span> 
+            </div>
+
             <div id= "correct">
                 Correct
             </div>
@@ -24,37 +28,21 @@
             </div>
 
 
-            <div id="question">
-
+            <div id="fruitContainer">
+                <img id ="fruit1" class ="fruit">
             </div>
 
             <div id="instruction">
-                Click on the correct answer
+                Catch fruits
             </div>
 
-            <div id="choice">
-                <div id ="box1" class="box">
-
-                </div>
-                <div id ="box2" class="box">
-                    
-                </div>
-                <div id ="box3" class="box">
-                    
-                </div>
-                <div id ="box4" class="box">
-                    
-                </div>
-                
-            </div>
+            
 
             <div id="set">
                 Start Game
             </div>
 
-            <div id="time">
-                Time remaining: <span id="timeRemaining">60</span> sec
-            </div>
+            
 
             <div id = "gameOver">
                 
@@ -62,7 +50,8 @@
 
         </div>
 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-        <script src="javascript.js"></script>
+        <script src="jQuery.js"></script>
     </body>
 </html>
