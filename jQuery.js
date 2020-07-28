@@ -2,7 +2,7 @@
 var play = false;
 var score = 0;
 
-var trialsLeft = 3;
+var trailsLeft;
 var fruits =['apple','grapes','lemon','orange','papaya','peach',
                 'pear', 'watermelon'];
 var step; 
@@ -32,6 +32,19 @@ $(function(){
             
         }
     });
+
+    //slice fruit
+     $("#fruit1").mouseover(function(){
+         score++;
+         $("#scoreValue").html(score);
+         
+         clearInterval(action);
+
+         $("fruit1").hide("explode", 500);
+
+         //send new fruit
+         setTimeout(startAction , 500);
+     });
     
     function addHearts(){
         //empty trail left box
@@ -56,7 +69,7 @@ $(function(){
 
         //check if fruit is low
         if($("#fruit1").position().top > $("#fruitContainer").height()){
-            if(trialsLeft > 1){
+            if(trailsLeft > 1){
                 $("#fruit1").show();
                 chooseFruit();
                 $("#fruit1").css({ left: Math.round(550 * Math.random()), top: -50 });
@@ -72,14 +85,14 @@ $(function(){
                 $("#set").html("Start Game");
                 $("#gameOver").show();
                 $("#gameOver").html('<p>Game Over!</p><p>Your Score is ' + score +'</p>');
-                $("#trialsLeft").hide();
+                $("#trailsLeft").hide();
                 stopAction();
             }
         }
 
         
 
-        },10);
+        }, 10);
 
         
     }
